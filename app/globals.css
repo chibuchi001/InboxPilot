@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #08080a;
+  --color-surface: #101012;
+  --color-surface2: #17171a;
+  --color-border: #2a2a2e;
+  --color-border2: #3d3d44;
+  --color-ink: #f0f0f2;
+  --color-muted: #7a7a86;
+  --color-dim: #4a4a55;
+  --color-amber: #f0a030;
+  --color-amber2: #e06820;
+  --color-blue: #4f8ef7;
+  --color-emerald: #34d474;
+  --color-rose: #f05050;
+  --color-violet: #b060f0;
+
+  --font-mono: 'DM Mono', 'Courier New', monospace;
+  --font-display: 'Syne', sans-serif;
+  --font-serif: 'Instrument Serif', serif;
+
+  --animate-blink: blink 2s infinite;
+  --animate-spin-fast: spin 0.75s linear infinite;
+  --animate-slide-up: slideUp 0.28s ease both;
+  --animate-progress: progressPulse 1.4s ease infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes progressPulse {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(400%); }
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  background-color: #08080a;
+  color: #f0f0f2;
+  font-family: 'DM Mono', 'Courier New', monospace;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #3d3d44; border-radius: 4px; }
